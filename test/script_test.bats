@@ -7,7 +7,7 @@ setup() {
   DIR="$(cd "$(dirname "$BATS_TEST_FILENAME")" >/dev/null 2>&1 && pwd)"
   PATH="$DIR/../src:$PATH"
 
-  TEST_DIR=$(mktmp -d)
+  TEST_DIR=$(mktemp -d)
   mkdir -p "$TEST_DIR/level1/level2/level3"
   export TEST_DIR
 }
